@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+
+// формула для знаходження НСК - НСК(a, b) = |ab|/НСД(a, b)
+
+// Функція для обчислення НСД двох чисел
+int fun1(int a, int b) {
+    if (b == 0)
+        return a;
+    return fun1(b, a % b);
+}
+
+// Функція для обчислення НСК двох чисел
+int fun2(int a, int b) {
+    return (a * b) / fun1(a, b);
+}
+
+int main() {
+    int n, i;
+    int numbers[20];
+    int result;
+
+    // кількість чисел для знаходження НСК
+    scanf("%d", &n);
+
+    // Зчитуємо числа
+    for (i = 0; i < n; i++) {
+        scanf("%d", &numbers[i]);
+    }
+
+    // Знаходимо НСК для всіх чисел
+    result = numbers[0];
+    for (i = 1; i < n; i++) {
+        result = fun2(result, numbers[i]);
+    }
+
+    // результат
+    printf("%d\n", result);
+
+    return 0;
+}
