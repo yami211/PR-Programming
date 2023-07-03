@@ -14,5 +14,6 @@ int main() {
     // Виводимо результат з округленням до 2 знаків після коми
 
     printf(" time to eat a pie: %.2f\n",  time);
+    printf(" overall time: %.2f\n",   overall_time);
     return 0;
 }
