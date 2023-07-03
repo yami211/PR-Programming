@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int t1, t2, t3;
+    float overall_time, time;
+
+    // зчитування даних з клавіатури t1, t2, t3
+    scanf("%d %d %d", &t1, &t2, &t3);
+
+    // час який потрібен гостям
+    overall_time = t1 +   t2 +   t3;
+    time =  overall_time / 3 ;
+
+    // Виводимо результат з округленням до 2 знаків після коми
+
+    printf(" time to eat a pie: %.2f\n",  time);
+    return 0;
+}
