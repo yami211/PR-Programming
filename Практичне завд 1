@@ -1,25 +1,25 @@
+#include <stdio.h>
 int main() {
     int t1, t2, t3;
-    double total_time, result, avg_time;
+    double total_time , time_needed;
+    printf("Input:\n");
+    scanf("%d %d %d",&t1,&t2,&t3);
+  
+  // умова значень які можна ввести 
+    if (t1>10000||t2>10000||t3>10000)
+    {
+        printf("ERROR");
+        return 0;
+    }
+    else {
+    total_time=1.0/t1+1.0/t2+1.0/t3;  // Обчислення всього часу
+    // Обчислення часу кінцевого
+    time_needed=1.0/total_time; // Обчислення результату
 
-    // Введення значень t1, t2, t3
-    printf("t1: ");
-    scanf("%d", &t1);
-    printf("t2: ");
-    scanf("%d", &t2);
-    printf("t3: ");
-    scanf("%d", &t3);
-
-    // Обчислення загального часу та часу на 3
-
-    total_time = t1 +  t2 +  t3;
-    avg_time = total_time / 3;
-    result = avg_time / 3;
-
-    // Виведення результату з  2 знакамипісля коми
-
-    printf("Total time: %.2f \n",  total_time);
-    printf("average_time: %.2f \n",  avg_time);
-    printf("Result: %.2f hours", result);
+    
+     // Виведення результату
+    printf("Time needed:%.2f\n", time_needed);
+   
+    }
     return 0;
-}
+   }
