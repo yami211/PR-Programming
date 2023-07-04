@@ -1,23 +1,25 @@
-#include <stdio.h>
-
 int main() {
     int t1, t2, t3;
-    double total_time, result;
+    double total_time, result, avg_time;
 
     // Введення значень t1, t2, t3
-    printf(" t1: ");
+    printf("t1: ");
     scanf("%d", &t1);
     printf("t2: ");
     scanf("%d", &t2);
-    printf(" t3: ");
+    printf("t3: ");
     scanf("%d", &t3);
 
     // Обчислення загального часу та часу на 3
-    total_time = t1 +  t2 +  t3;
-    result = t1 / total_time + t2 / total_time + t3 / total_time ;
 
-    // Виведення результату
-    printf("Total time: %.2f годин\n",  total_time);
-      printf("result: %.2f годин\n", result);
+    total_time = t1 +  t2 +  t3;
+    avg_time = total_time / 3;
+    result = avg_time / 3;
+
+    // Виведення результату з  2 знакамипісля коми
+
+    printf("Total time: %.2f \n",  total_time);
+    printf("average_time: %.2f \n",  avg_time);
+    printf("Result: %.2f hours", result);
     return 0;
 }
