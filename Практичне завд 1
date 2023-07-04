@@ -2,18 +2,22 @@
 
 int main() {
     int t1, t2, t3;
-    float overall_time, time;
+    double total_time, result;
 
-    // зчитування даних з клавіатури t1, t2, t3
-    scanf("%d %d %d", &t1, &t2, &t3);
+    // Введення значень t1, t2, t3
+    printf(" t1: ");
+    scanf("%d", &t1);
+    printf("t2: ");
+    scanf("%d", &t2);
+    printf(" t3: ");
+    scanf("%d", &t3);
 
-    // час який потрібен гостям
-    overall_time = t1 +   t2 +   t3;
-    time =  overall_time / 3 ;
+    // Обчислення загального часу та часу на 3
+    total_time = t1 +  t2 +  t3;
+    result = t1 / total_time + t2 / total_time + t3 / total_time ;
 
-    // Виводимо результат з округленням до 2 знаків після коми
-
-    printf(" time to eat a pie: %.2f\n",  time);
-    printf(" overall time: %.2f\n",   overall_time);
+    // Виведення результату
+    printf("Total time: %.2f годин\n",  total_time);
+      printf("result: %.2f годин\n", result);
     return 0;
 }
