@@ -2,21 +2,21 @@
 
 int main() {
     int n, count = 0;
-    
-    printf("Введіть натуральне число n: ");
+
+    printf("Integer n: ");
     scanf("%d", &n);
-    
+
     // Перебір чисел від 1 до n-1
     for (int m = 1; m < n; m++) {
-        int quotient = n / m;  // Частка від ділення n на m
-        int remainder = n % m; // Залишок від ділення n на m
-        
-        if (quotient == remainder) {
-            count++; // Збільшуємо лічильник, якщо умова рівних дільників виконується
+        int quo = n / m;  // Частка від ділення n на m
+        int rem = n % m; // Залишок від ділення n на m
+
+        if (quo == rem) {
+            count++; // Збільшуємо лічильник, якщо умова  (quo == rem) виконується
         }
     }
-    
-    printf("Кількість рівних дільників для числа %d: %d\n", n, count);
-    
+
+    printf(" kilkist rivnyh dilnykiv dlya %d: %d\n", n, count);
+
     return 0;
 }
