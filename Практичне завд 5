@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int countSequences(int n) {
+int countS(int n) {
     // Створення масиву dp для зберігання проміжних результатів
     int dp[n + 1];
 
@@ -27,10 +27,10 @@ int main() {
     scanf("%d", &n);
 
     // Виклик функції countSequences для обчислення кількості послідовностей
-    int result = countSequences(n);
+    int result = countS(n);
 
     // Виведення результату
-    printf("Кількість шуканих послідовностей: %d\n", result);
+    printf("result: %d\n", result);
 
     return 0;
 }
