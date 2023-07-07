@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+
+void swap(char* x, char* y) {
+    char temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+void generateAnagrams(char* word, int start, int end, int* count) {
+    if (start == end) {
+        printf("%s\n", word);
+        (*count)++;
+    } else {
+        for (int i = start; i <= end; i++) {
+            int isDuplicate = 0;
+            for (int j = start; j < i; j++) {
+                if (word[j] == word[i]) {
+                    isDuplicate = 1;
+                    break;
+                }
+            }
+            if (!isDuplicate) {
+                swap(&word[start], &word[i]);
+                generateAnagrams(word, start + 1, end, count);
+                swap(&word[start], &word[i]);
+            }
+        }
+    }
+}
+
+int main() {
+    char word[15];
+    printf("Enter a word: ");
+    scanf("%s", word);
+
+    int count = 0;
+    generateAnagrams(word, 0, strlen(word) - 1, &count);
+
+    printf("Number of anagrams: %d\n", count);
+
+    return 0;
+}
