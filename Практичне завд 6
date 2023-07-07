@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <math.h>
+
+// Функція для обчислення довжини вектора
+double vectorL(int x1, int y1, int x2, int y2) {
+    // Обчислюємо різницю координат по кожній осі
+    int dx = x2 - x1;
+    int dy = y2 - y1;
+
+    // Обчислюємо квадрати різниць координат
+    int dxSquared = dx * dx;
+    int dySquared = dy * dy;
+
+    // Обчислюємо суму квадратів різниць координат
+    int sumOfSquares = dxSquared + dySquared;
+
+    // Обчислюємо квадратний корінь від суми квадратів
+    double length = sqrt(sumOfSquares);
+
+    return length;
+}
+
+int main() {
+    int x1, y1, x2, y2;
+    printf("input x1, y1, x2, y2: ");
+    scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+    // Обчислюємо довжину вектора
+    double vectorLength = vectorL(x1, y1, x2, y2);
+
+    // Виводимо результат з точністю до шести знаків після коми
+    printf("Vector Length: %.6f\n", vectorLength);
+
+    return 0;
+}
